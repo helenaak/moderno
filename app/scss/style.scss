@@ -1,6 +1,7 @@
 @import 'vars';
-@import 'global';
 @import 'fonts';
+@import 'global';
+
 
 // starts header 
 
@@ -124,11 +125,14 @@
 .products__inner-btn{
     text-align: center;
     margin-bottom: 60px;
+    outline: none;
     button{
         padding: 12px 21px;
         border: none;
         background-color: #fff;
         color: $bg;
+        outline: none;
+       
         cursor: pointer;
         & + button{
             margin-left: 5px;
@@ -165,7 +169,6 @@
       min-height: 90px;
       font-weight: 500;
       border-bottom: 1px solid #e7ecf2;
-
     }  
     &-name{
       max-width: 310px;
@@ -197,6 +200,7 @@
     &-author{
       display: flex;
       align-items: center;
+      max-width: 245px;
       .avatar{
         width: 30px;
         height: 30px;
@@ -212,9 +216,16 @@
           font-weight: 500;
       }
     }
+    &-star{
+       span{
+           font-size: 12px;
+           color: $bg;
+       } 
+    }
 }
 .products__bottom-btn{
     text-align: center;
+    outline: none;
     button{
         margin: 45px 5px 0 ;
         box-shadow: 0px 1px 3px 0px rgba(204, 216, 228, 0.75);
@@ -226,19 +237,46 @@
         &.mixitup-control-active{
             background-color: $red;
             color: #fff;
-            outline: none;
-        }
+            
     }
 
 
 }
 
-  
-
-
-  
-
-
 // end products
+// start .product-slider
+.product-slider{
+    padding: 110px 0px 120px;
+    .slick-dots{
+        text-align: center;
+        margin-top: 50px;
+        li{
+            display: inline-block;
+            margin-left: 3px;
+            margin-right: 3px;
+            cursor: pointer;
+            &.slick-active{
+                button{
+                    background-color: $green;
+                    
+                }
+            }
+            button{
+                border-radius: 50%;
+                background-color: rgb(232, 232, 232);
+                border: none; 
+                font-size: 0; 
+                width: 16px;
+                height: 16px;
+                outline: none;
+            }
+        }
+    }
+
+}
+  
+// end product-slider
+
+
 
   
