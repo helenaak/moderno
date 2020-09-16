@@ -16,7 +16,7 @@ gulp.task('sass', function(){
          overrideBrowsersList: ['last 8 versions']
      }))
      .pipe(gulp.dest('app/css'))
-     .pipe(browserSync.reload({stream: true}))
+     .pipe(browserSync.reload({stream: true}));
 
 });
 gulp.task('style', function(){
@@ -37,7 +37,7 @@ gulp.task('script', function(){
         'node_modules/slick-carousel/slick/slick.js',
         'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
         'node_modules/mixitup/dist/mixitup.js',
-        'node_modules/rateyo/src/jquery.rateyo.js';
+        'node_modules/rateyo/src/jquery.rateyo.js'
         
     ])
      .pipe(concat('libs.min.js'))
@@ -55,7 +55,7 @@ gulp.task('html', function(){
 
 gulp.task('js', function(){
     return gulp.src('app/js/*.js')
-       .pipe(browserSync.reload({stream: true}))
+       .pipe(browserSync.reload({stream: true}));
 });
 
 
